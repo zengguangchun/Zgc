@@ -6,9 +6,17 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.Scanner;
 
-public class Main {
+import com.bwei.test.abstracts.Sum_X;
+import com.bwei.test.abstracts.Sum_Xs;
+import com.bwei.test.file.Readfile;
+import com.bwei.test.interfaces.Tuzi;
+import com.bwei.test.interfaces.Tuzishi;
+
+public class Main extends Readfile{//继承Readfile的类
 	static int [] arr={1,2,3,4,5,6,7,8,9,10};
+	static File file = new File("D:\\Android");
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		// writeObjectToFile("写入一句话顶顶顶");//写入
@@ -16,7 +24,25 @@ public class Main {
 		
 		//System.out.println(dg(5));//递归
 		
-		System.out.println("所找的数 :"+seach(arr,7));//二分法
+		//System.out.println("所找的数 :"+seach(arr,7));//二分法
+		/**
+		 * 2016/11/30
+		 * 
+		 */
+		//readAll(file);//读取文件
+		
+		//接口
+		//Tuzishi tuzi = new Tuzishi();
+		Tuzi tuzi = new Tuzishi();
+		//tuzi.a();//兔子计算
+		//tuzi.b();//打印出杨辉三角形（要求打印出10行以上）
+
+		//抽象
+		//Sum_Xs sum_Xs = new Sum_Xs();
+		Sum_X sum_Xs = new Sum_Xs();
+		//sum_Xs.A();//有1,2,3,4四个数字，能组成多少个互不相同且无重复数字的三位数？都是多少？
+		//sum_Xs.B();//打印出杨辉三角形（要求打印出10行以上）
+		//sum_Xs.C();//5位数中找出所有，判断它是不是回文数。即12321是回文数，个位与万位相同，十位与千位相同。
 	}
 
 	// 写入文件保存类容
